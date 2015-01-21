@@ -16,10 +16,10 @@ import util.KeyboardReader;
  */
 public class Game01 {
 	
-	private static int answer=56;
-	private static int guess;
+	private  int answer=56;
+	private  int guess;
 	
-	public static void play(){
+	public void play(){
 		guess = KeyboardReader.getPromptedInt("Please guess a number between 1 and and 100\n");
 		if (guess < answer) System.out.println("Too low");
 		if (guess > answer) System.out.println("Too high");
@@ -27,7 +27,7 @@ public class Game01 {
 	}
 
 	public static void main(String[] args) {
-		Game01.play();
+		new Game01().play();
 	}
 
 }
