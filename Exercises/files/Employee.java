@@ -1,3 +1,4 @@
+package files;
 /*We would like to develop a simple employee database system that will include the ability to pay an employee
  *(print a check for them, and processing necessary for bookkeeping). As a first step, we will define a type
  *of object to represent an employee. Note that we are not trying to create an actual Java class. We are only
@@ -11,7 +12,7 @@ public class Employee {
 	//data fields
 	double totalGrossPay, totalDeduct, totalNetPay, weekGrossPay, weekDeduct, weekNetPay;
 	int employeeId, bankAccNum, socSecurityNum;
-	Date dOB, hireDate, today, payPeriodBegin, payPeriodEnd;
+	//Date dOB, hireDate, today, payPeriodBegin, payPeriodEnd;
 	String firstName, lastName, fullName;
 	char gender;
 	
@@ -29,7 +30,7 @@ public class Employee {
 	} 
 
 	public static void main(String[] args) {
-		Employee employee1= new Employee();
+	//	Employee employee1= new Employee();
 	}
 
 }

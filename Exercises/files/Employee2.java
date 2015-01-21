@@ -1,25 +1,26 @@
+package files;
 /*
-Modify your Employee class to use a constructor that accepts parameters for the first and last names, department, and pay rate.
-Also add a constructor that takes no parameters and does nothing (as we discussed above).
-public Employee() { }
+After review with management, it is decided that we will store the following information for each employee:
+
+Employee ID (an integral number, automatically assigned when a new employee is added).
+First name and last name.
+Department number (an integral value, call it dept).
+Pay rate (a floating-point value, using a double).
+In addition, we would like:
+
+A method called getPayInfo() that will return a sentence with the employee's name, id, department, and pay rate amount.
+A method called getFullName() that will return the first and last names separated by a space.
+Define a class called Employee with these characteristics, using standard practices for limiting data access and for method naming .
+In order to be useful, there should be methods to set and get all properties (except setting the employee id, which will happen
+automatically in a manner to be determined later; for now, just let it default to 0, but still provide a method to retrieve it).
 */
-public class Employee3 {
+public class Employee2 {
 	
 	private int employeeId;//0 for now
 	private String firstName;
 	private String lastName;
 	private int deptNum;
 	double payRate;
-	
-	public Employee3(){	
-	}
-	
-	public Employee3(String fName, String lName, int dNum, double pRate){
-		
-		setFullName(fName, lName);
-		setDeptNum(dNum);
-		setPayRate(pRate);
-	}
 	
 	public String getPayInfo(){
 		return getFullName() + "\nID: " +  employeeId + "\n" + getDeptNum() + "\n" + getPayRate(); 	
