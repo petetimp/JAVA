@@ -1,5 +1,4 @@
 package files;
-import employees.Employee6;
 
 /*
 In Payroll, before we create the first employee, call Employee.setNextId(22) to set the value that will be used for the first employee.

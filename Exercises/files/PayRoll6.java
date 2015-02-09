@@ -1,5 +1,4 @@
 package files;
-import employees.Employee6;
 import util.KeyboardReader;
 
 /*

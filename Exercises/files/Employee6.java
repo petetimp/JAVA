@@ -1,4 +1,4 @@
-package employees;
+package files;
 /*
  Add a private and static integer field called nextId to the Employee class (give it an initial value of 1).
 Modify the declaration of the id field as follows:

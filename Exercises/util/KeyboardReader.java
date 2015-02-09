@@ -13,6 +13,9 @@ public class KeyboardReader {
     System.out.print(prompt);
     try {
       response = in.readLine();
+      if(response.equals("") || response.equals(" ")){
+    	  return "false";
+      }
     } catch (IOException e) {
       System.out.println("IOException occurred");
     }
@@ -20,17 +23,37 @@ public class KeyboardReader {
   }
   
   public static char getPromptedChar(String prompt) {
-    return getPromptedString(prompt).charAt(0);
+    char ch;
+	try{
+    	ch = getPromptedString(prompt).charAt(0);
+    }
+    catch(StringIndexOutOfBoundsException e){
+    	return ' ';
+    }
+    return ch;
   }
   
   public static int getPromptedInt(String prompt) {
-    return Integer.parseInt(getPromptedString(prompt));
+   int num;
+   try{
+	  num=Integer.parseInt(getPromptedString(prompt));
+   }
+   catch(NumberFormatException e){
+	   return 0;
+   }
+   return num;
   }
   
   public static float getPromptedFloat(String prompt) {
     return Float.parseFloat(getPromptedString(prompt));
   }
   public static double getPromptedDouble(String prompt) {
-    return Double.parseDouble(getPromptedString(prompt));
+    double doub;
+	 try{
+		 doub=Double.parseDouble(getPromptedString(prompt));
+    }catch(NumberFormatException e){
+    	return 0;
+    }
+	return doub;
   }
 }
